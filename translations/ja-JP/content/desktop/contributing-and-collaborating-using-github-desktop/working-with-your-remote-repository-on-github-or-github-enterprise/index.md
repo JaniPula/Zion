@@ -4,13 +4,10 @@ intro: 'ローカルでプロジェクトに変更を加えていくと、リモ
 redirect_from:
   - /desktop/contributing-to-projects/working-with-your-remote-repository-on-github-or-github-enterprise
 versions:
-  fpt: '*'
+  free-pro-team: '*'
 children:
   - /creating-an-issue-or-pull-request
   - /viewing-a-pull-request-in-github-desktop
-  - /viewing-and-re-running-checks-in-github-desktop
-  - /configuring-notifications-in-github-desktop
   - /changing-a-remotes-url-from-github-desktop
-shortTitle: Work with your remote repo
 ---
 

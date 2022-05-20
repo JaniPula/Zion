@@ -1,31 +1,25 @@
 ---
 title: リポジトリにセキュリティポリシーを追加する
-intro: セキュリティポリシーをリポジトリに追加することによって、プロジェクト内のセキュリティ脆弱性を報告する方法の手順を示すことができます。
+intro: You can give instructions for how to report a security vulnerability in your project by adding a security policy to your repository.
 redirect_from:
   - /articles/adding-a-security-policy-to-your-repository
   - /github/managing-security-vulnerabilities/adding-a-security-policy-to-your-repository
   - /github/code-security/security-advisories/adding-a-security-policy-to-your-repository
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
-type: how_to
+  free-pro-team: '*'
+  enterprise-server: '>=3.1'
+  github-ae: next
 topics:
-  - Security policies
-  - Vulnerabilities
-  - Repositories
-  - Health
-shortTitle: セキュリティポリシーの追加
+  - Security
 ---
 
-## セキュリティポリシーについて
+### セキュリティポリシーについて
 
-プロジェクト内のセキュリティ脆弱性を報告する手順を人々に示すには、{% ifversion fpt or ghes or ghec %}_SECURITY.md_ファイルをリポジトリのルート、`docs`、`.github`フォルダのいずれかに追加できます。{% else %}_SECURITY.md_ファイルをリポジトリのルートあるいは`docs`フォルダに追加できます。{% endif %}誰かがリポジトリでIssueを作成すると、リポジトリのセキュリティポリシーへのリンクが示されます。
+To give people instructions for reporting security vulnerabilities in your project,{% if currentVersion == "free-pro-team@latest" or currentVersion ver_gt "enterprise-server@3.0" %} you can add a _SECURITY.md_ file to your repository's root, `docs`, or `.github` folder.{% else %} you can add a _SECURITY.md_ file to your repository's root, or `docs` folder.{% endif %} When someone creates an issue in your repository, they will see a link to your project's security policy.
 
-{% ifversion not ghae %}
+{% if currentVersion != 'github-ae@next' %}
 <!-- no public repos in GHAE -->
-Organizationあるいは個人アカウントに対するデフォルトのセキュリティポリシーを作成できます。 詳しい情報については「[デフォルトのコミュニティ健全性ファイルを作成する](/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)」を参照してください。
+所属する Organization またはユーザアカウント用にデフォルトのセキュリティポリシーを作成できます。 詳しい情報については「[デフォルトのコミュニティ健全性ファイルを作成する](/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)」を参照してください。
 {% endif %}
 
 {% tip %}
@@ -34,21 +28,21 @@ Organizationあるいは個人アカウントに対するデフォルトのセ�
 
 {% endtip %}
 
-{% ifversion fpt or ghec %}
-プロジェクトのセキュリティの脆弱性が報告された後、{% data variables.product.prodname_security_advisories %} を使用して脆弱性に関する情報を開示、修正、公開できます。 {% data variables.product.prodname_dotcom %}における脆弱性の報告と公開のプロセスに関する詳しい情報については、「[セキュリティ脆弱性の調整された公開について](/code-security/security-advisories/about-coordinated-disclosure-of-security-vulnerabilities#about-reporting-and-disclosing-vulnerabilities-in-projects-on-github)」を参照してください。 {% data variables.product.prodname_security_advisories %} の詳細については、「[{% data variables.product.prodname_security_advisories %} について](/github/managing-security-vulnerabilities/about-github-security-advisories)」を参照してください。
+{% if currentVersion == "free-pro-team@latest" %}
+プロジェクトのセキュリティの脆弱性が報告された後、{% data variables.product.prodname_security_advisories %} を使用して脆弱性に関する情報を開示、修正、公開できます。 For more information about the process of reporting and disclosing vulnerabilities in {% data variables.product.prodname_dotcom %}, see "[About coordinated disclosure of security vulnerabilities](/code-security/security-advisories/about-coordinated-disclosure-of-security-vulnerabilities#about-reporting-and-disclosing-vulnerabilities-in-projects-on-github)." {% data variables.product.prodname_security_advisories %} の詳細については、「[{% data variables.product.prodname_security_advisories %} について](/github/managing-security-vulnerabilities/about-github-security-advisories)」を参照してください。
 
 {% data reusables.repositories.github-security-lab %}
 {% endif %}
-{% ifversion ghes or ghae %}
+{% if currentVersion ver_gt "enterprise-server@3.0" or currentVersion == 'github-ae@next' %}
 <!-- alternative to the content about GitHub Security Advisories in the dotcom article -->
-セキュリティの報告の指示を明確に利用できる要することで、ユーザがあなたの好むコミュニケーションチャンネルを使ってリポジトリで見つけたセキュリティ脆弱性を報告することを容易にできます。
+By making security reporting instructions clearly available, you make it easy for your users to report any security vulnerabilities they find in your repository using your preferred communication channel.
 {% endif %}
 
-## リポジトリにセキュリティポリシーを追加する
+### リポジトリにセキュリティポリシーを追加する
 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.sidebar-security %}
-3. 左のサイドバーで**Security policy（セキュリティポリシー）**をクリックしてください。 ![セキュリティポリシータブ](/assets/images/help/security/security-policy-tab.png)
+3. In the left sidebar, click **Security policy**. ![Security policy tab](/assets/images/help/security/security-policy-tab.png)
 4. [**Start setup**] をクリックします。 ![[Start setup] ボタン](/assets/images/help/security/start-setup-security-policy-button.png)
 5. 新しい _SECURITY.md_ ファイルに、プロジェクトがサポートするバージョンと、脆弱性を報告する方法についての情報を追加します。
 {% data reusables.files.write_commit_message %}
@@ -56,8 +50,8 @@ Organizationあるいは個人アカウントに対するデフォルトのセ�
 {% data reusables.files.choose_commit_branch %}
 {% data reusables.files.propose_file_change %}
 
-## 参考リンク
+### 参考リンク
 
-- 「[リポジトリの保護](/code-security/getting-started/securing-your-repository)」{% ifversion not ghae %}
-- 「[健全な貢献のためのプロジェクトのセットアップ](/communities/setting-up-your-project-for-healthy-contributions)」{% endif %}{% ifversion fpt or ghec %}
+- "[About securing your repository](/github/administering-a-repository/about-securing-your-repository)"{% if currentVersion != 'github-ae@next' %}
+- "[Setting up your project for healthy contributions](/communities/setting-up-your-project-for-healthy-contributions)"{% endif %}{% if currentVersion == "free-pro-team@latest" %}
 - [{% data variables.product.prodname_security %}]({% data variables.product.prodname_security_link %}){% endif %}

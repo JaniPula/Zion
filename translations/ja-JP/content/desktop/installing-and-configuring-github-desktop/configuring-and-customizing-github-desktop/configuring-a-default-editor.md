@@ -5,11 +5,9 @@ redirect_from:
   - /desktop/getting-started-with-github-desktop/configuring-a-default-editor
   - /desktop/installing-and-configuring-github-desktop/configuring-a-default-editor
 versions:
-  fpt: '*'
-shortTitle: Configure default editor
+  free-pro-team: '*'
 ---
-
-## サポートされているエディタ
+### サポートされているエディタ
 
 {% data variables.product.prodname_desktop %} は、次のエディタをサポートしています。
 
@@ -35,8 +33,6 @@ shortTitle: Configure default editor
 - [CodeRunner](https://coderunnerapp.com/)
 - [SlickEdit](https://www.slickedit.com/)
 - [Xcode](https://developer.apple.com/xcode/)
-- [RStudio](https://rstudio.com/)
-- [Nova](https://nova.app/)
 - [Android Studio](https://developer.android.com/studio)
 
 {% endmac %}
@@ -50,22 +46,14 @@ shortTitle: Configure default editor
 - [ColdFusion Builder](https://www.adobe.com/products/coldfusion-builder.html)
 - [Typora](https://typora.io/)
 - [SlickEdit](https://www.slickedit.com/)
-- [JetBrains IntelliJ Idea](https://www.jetbrains.com/idea/)
 - [JetBrains WebStorm](https://www.jetbrains.com/webstorm/)
 - [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/)
 - [JetBrains Rider](https://www.jetbrains.com/rider/)
-- [JetBrains CLion](https://www.jetbrains.com/clion/)
-- [JetBrains PyCharm](https://www.jetbrains.com/pycharm/)
-- [JetBrains RubyMine](https://www.jetbrains.com/rubymine/)
-- [JetBrains GoLand](https://www.jetbrains.com/go/)
-- [Android Studio](https://developer.android.com/studio)
-- [Brackets](http://brackets.io/)
 - [Notepad++](https://notepad-plus-plus.org/)
-- [RStudio](https://rstudio.com/)
 
 {% endwindows %}
 
-## デフォルトエディタの設定方法
+### デフォルトエディタの設定方法
 
 {% mac %}
 

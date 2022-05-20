@@ -3,18 +3,15 @@ title: Acerca de las API de GitHub
 intro: 'Aprende sobre las API de {% data variables.product.prodname_dotcom %} para extender y personalizar tu experiencia en {% data variables.product.prodname_dotcom %}.'
 redirect_from:
   - /v3/versions
-  - /articles/getting-started-with-the-api
-  - /github/extending-github/getting-started-with-the-api
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - API
 ---
 
-Hay dos versiones estables de la API de GitHub: la [API de REST](/rest) y la [API de GraphQL]({% ifversion ghec %}/free-pro-team@latest{% endif %}/graphql). Cuando utilizas la API de REST, te exhortamos a que [solicites la v3 a través del encabezado de `Accept`](/v3/media/#request-specific-version). Para obtener más información sobre cómo utilizar la API de GraphQL, consulta los [documentos de la v4]({% ifversion ghec %}/free-pro-team@latest{% endif %}/graphql).
+Hay dos versiones estables de la API de GitHub: la [API de REST](/rest) y la [API de GraphQL](/graphql). Cuando utilizas la API de REST, te exhortamos a que [solicites la v3 a través del encabezado de `Accept`](/v3/media/#request-specific-version). Para obtener más información sobre cómo utilizar la API de GraphQL, consulta los [documentos de la v4](/graphql).
 
 ## Versiones obsoletas
 

@@ -9,17 +9,15 @@ redirect_from:
   - /github/setting-up-and-managing-organizations-and-teams/maintaining-ownership-continuity-for-your-organization
 permissions: Organization owners can promote any member of an organization to an organization owner.
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - Organizations
   - Teams
-shortTitle: Mantener la continuidad de la propiedad
 ---
 
-## Acerca de mantener la continuidad de propiedad para tu organización
+### Acerca de mantener la continuidad de propiedad para tu organización
 
 {% data reusables.organizations.org-ownership-recommendation %}
 
@@ -31,14 +29,10 @@ Los propietarios de una organización tienen acceso administrativo completo a la
 
 {% endnote %}
 
-{% if enterprise-owner-join-org %}
-Si tu organización le pertenece a una cuenta empresarial, cualquier propietario de empresa podrá hacerse propietario de esta. Para obtener más información, consulta la sección "[Administrar tu rol en una organización que le pertenezca a tu empresa](/admin/user-management/managing-organizations-in-your-enterprise/managing-your-role-in-an-organization-owned-by-your-enterprise)".
-{% endif %}
+### Designar un propietario de organización
 
-## Designar un propietario de organización
-
+{% data reusables.profile.access_profile %}
 {% data reusables.profile.access_org %}
-{% data reusables.user-settings.access_org %}
 {% data reusables.organizations.people %}
 4. Selecciona la persona o las personas que quisieras promover a propietario. ![Lista de miembros con dos miembros seleccionados](/assets/images/help/teams/list-of-members-selected-bulk.png)
 5. Arriba de la lista de miembros, usa el menú desplegable y haz clic en **Change role...** (Cambiar rol). ![Menú desplegable con la opción para eliminar miembros](/assets/images/help/teams/user-bulk-management-options.png)

@@ -1,1 +1,0 @@
-The path to the directory containing preinstalled tools for {% data variables.product.prodname_dotcom %}-hosted runners. For more information, see "[About {% data variables.product.prodname_dotcom %}-hosted runners](/actions/reference/specifications-for-github-hosted-runners/#supported-software)".

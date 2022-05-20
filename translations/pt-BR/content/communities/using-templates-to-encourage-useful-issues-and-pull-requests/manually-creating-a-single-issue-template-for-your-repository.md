@@ -2,17 +2,15 @@
 title: Criar manualmente um modelo único de problema no repositório
 intro: 'Ao adicionar um modelo de problema criado manualmente no repositório, os colaboradores de projetos verão automaticamente o conteúdo do modelo no texto do problema.'
 redirect_from:
-  - /articles/creating-an-issue-template-for-your-repository
+  - /articles/creating-an-issue-template-for-your-repository/
   - /articles/manually-creating-a-single-issue-template-for-your-repository
   - /github/building-a-strong-community/manually-creating-a-single-issue-template-for-your-repository
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - Community
-shortTitle: Criar um modelo de problema
 ---
 
 {% data reusables.repositories.legacy-issue-template-tip %}
@@ -38,19 +36,19 @@ assignees: octocat
 
 {% endnote %}
 
-{% ifversion fpt or ghec %}
+{% if currentVersion == "free-pro-team@latest" %}
 
 {% data reusables.repositories.valid-community-issues %}
 
 {% endif %}
 
-{% ifversion fpt or ghes or ghec %}
+{% if currentVersion == "free-pro-team@latest" or enterpriseServerVersions contains currentVersion %}
 
 {% data reusables.repositories.default-issue-templates %}
 
 {% endif %}
 
-## Adicionar um modelo de problema
+### Adicionar um modelo de problema
 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.files.add-file %}
@@ -68,7 +66,7 @@ assignees: octocat
 {% data reusables.files.choose_commit_branch %} Os modelos são disponibilizados para os colaboradores quando sofrem merge no branch padrão do repositório.
 {% data reusables.files.propose_new_file %}
 
-## Leia mais
+### Leia mais
 
 - "[Sobre modelos de problema e pull request](/articles/about-issue-and-pull-request-templates)"
 - "[Configurando modelos de problemas para seu repositório](/articles/configuring-issue-templates-for-your-repository)"

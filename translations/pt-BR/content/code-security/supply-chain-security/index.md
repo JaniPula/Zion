@@ -6,16 +6,13 @@ redirect_from:
   - /categories/managing-security-vulnerabilities
   - /github/managing-security-vulnerabilities
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: issue-4864
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '>=3.0'
 topics:
-  - Dependabot
-  - Dependencies
-  - Repositories
+  - Security
 children:
   - /understanding-your-software-supply-chain
-  - /end-to-end-supply-chain
+  - /keeping-your-dependencies-updated-automatically
+  - /managing-vulnerabilities-in-your-projects-dependencies
 ---
-
+### Índice

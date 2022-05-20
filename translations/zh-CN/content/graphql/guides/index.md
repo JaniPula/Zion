@@ -4,10 +4,9 @@ intro: 了解如何开始使用 GraphQL、从 REST 迁移到 GraphQL 以及如�
 redirect_from:
   - /v4/guides
 versions:
-  fpt: '*'
-  ghec: '*'
-  ghes: '*'
-  ghae: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - API
 children:
@@ -18,6 +17,5 @@ children:
   - /using-the-explorer
   - /managing-enterprise-accounts
   - /using-the-graphql-api-for-discussions
-  - /migrating-graphql-global-node-ids
 ---
 

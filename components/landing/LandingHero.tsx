@@ -1,19 +1,16 @@
 import { useEffect, useState } from 'react'
 import cx from 'classnames'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { LinkExternalIcon } from '@primer/octicons-react'
-
 import { useMainContext } from 'components/context/MainContext'
-import { Link } from 'components/Link'
+
 import { useProductLandingContext } from 'components/context/ProductLandingContext'
 import { useTranslation } from 'components/hooks/useTranslation'
 import { useVersion } from 'components/hooks/useVersion'
-import { Lead } from 'components/ui/Lead'
 
 export const LandingHero = () => {
   const { airGap } = useMainContext()
-  const { product_video, shortTitle, title, beta_product, intro, introLinks } =
-    useProductLandingContext()
+  const { product_video, shortTitle, beta_product, intro, introLinks } = useProductLandingContext()
   const { t } = useTranslation('product_landing')
   const [renderIFrame, setRenderIFrame] = useState(false)
 
@@ -24,33 +21,56 @@ export const LandingHero = () => {
 
   return (
     <header className="d-lg-flex gutter-lg mb-6">
-      <div className={cx('col-12 mb-3 mb-lg-0', product_video && 'col-lg-6')}>
-        <h1>
-          {shortTitle || title}{' '}
+      <div className={cx(product_video && 'col-12 col-lg-6 mb-3 mb-lg-0')}>
+        <span className="text-mono color-text-secondary">Product</span>
+        <h1 className="mb-3 font-mktg">
+          {shortTitle}{' '}
           {beta_product && <span className="Label Label--success v-align-middle">Beta</span>}
         </h1>
 
-        {intro && <Lead data-search="lead">{intro}</Lead>}
+        <div
+          className="lead-mktg color-text-secondary"
+          dangerouslySetInnerHTML={{ __html: intro }}
+        />
 
-        {introLinks &&
-          Object.entries(introLinks)
-            .filter(([key, link]) => {
-              return link && !key.includes('raw')
-            })
-            .map(([key, link], i) => {
-              if (!link) {
-                return null
-              }
-              return (
-                <FullLink
-                  key={link}
-                  href={link}
-                  className={cx('btn btn-large f4 mt-3 mr-3 ', i === 0 && 'btn-primary')}
-                >
-                  {t(key) || key}
-                </FullLink>
-              )
-            })}
+        {/* idea to abstract the introLinks into something more component-like */}
+        {/* {introLinks.map((link) => {
+            return (
+              <FullLink
+                href={link.href}
+                className={cx(
+                  'btn-mktg btn-large f4 mt-3 mr-3',
+                  link.secondary && 'btn-outline-mktg'
+                )}
+              >
+                {t(link.translationKeyLabel)}
+              </FullLink>
+            )
+          })} */}
+
+        {introLinks?.quickstart && (
+          <FullLink href={introLinks.quickstart} className="btn-mktg btn-large f4 mt-3 mr-3">
+            {t('quickstart')}
+          </FullLink>
+        )}
+
+        {introLinks?.reference && (
+          <FullLink
+            href={introLinks.reference}
+            className="btn-mktg btn-outline-mktg btn-large f4 mt-3 mr-3"
+          >
+            {t('reference')}
+          </FullLink>
+        )}
+
+        {introLinks?.overview && (
+          <FullLink
+            href={introLinks.overview}
+            className="btn-mktg btn-outline-mktg btn-large f4 mt-3 mr-3"
+          >
+            {t('overview')}
+          </FullLink>
+        )}
       </div>
 
       {product_video && (
@@ -73,8 +93,7 @@ export const LandingHero = () => {
   )
 }
 
-// Fully Qualified Link - it includes the version and locale in the path if
-// the href is not an external link.
+// Fully Qualified Link - it includes the version and locale in the path
 type Props = {
   href: string
   children: React.ReactNode
@@ -83,24 +102,13 @@ type Props = {
 export const FullLink = ({ href, children, className }: Props) => {
   const router = useRouter()
   const { currentVersion } = useVersion()
-
-  const isExternal = href.startsWith('https')
-  let linkHref = href
-  if (!isExternal) {
-    const locale = router.locale || 'en'
-    linkHref = `/${locale}${
-      currentVersion !== 'free-pro-team@latest' ? `/${currentVersion}` : ''
-    }${href}`
-  }
-
+  const locale = router.locale || 'en'
+  const fullyQualifiedHref = `/${locale}${
+    currentVersion !== 'free-pro-team@latest' ? `/${currentVersion}` : ''
+  }${href}`
   return (
-    <Link href={linkHref} className={className}>
-      {children}{' '}
-      {isExternal && (
-        <span className="ml-1">
-          <LinkExternalIcon size="small" />
-        </span>
-      )}
+    <Link href={fullyQualifiedHref}>
+      <a className={className}>{children}</a>
     </Link>
   )
 }

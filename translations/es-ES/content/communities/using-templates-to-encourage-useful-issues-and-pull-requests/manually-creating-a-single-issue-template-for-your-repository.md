@@ -2,17 +2,15 @@
 title: Crear de forma manual una plantilla de propuesta única para tu repositorio
 intro: 'Cuando agregas una plantilla de propuesta creada de forma manual a tu repositorio, los colaboradores del proyecto verán automáticamente los contenidos de la plantilla en el cuerpo de la propuesta.'
 redirect_from:
-  - /articles/creating-an-issue-template-for-your-repository
+  - /articles/creating-an-issue-template-for-your-repository/
   - /articles/manually-creating-a-single-issue-template-for-your-repository
   - /github/building-a-strong-community/manually-creating-a-single-issue-template-for-your-repository
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - Community
-shortTitle: Crear una plantilla de propuesta
 ---
 
 {% data reusables.repositories.legacy-issue-template-tip %}
@@ -38,19 +36,19 @@ asignados: octocat
 
 {% endnote %}
 
-{% ifversion fpt or ghec %}
+{% if currentVersion == "free-pro-team@latest" %}
 
 {% data reusables.repositories.valid-community-issues %}
 
 {% endif %}
 
-{% ifversion fpt or ghes or ghec %}
+{% if currentVersion == "free-pro-team@latest" or enterpriseServerVersions contains currentVersion %}
 
 {% data reusables.repositories.default-issue-templates %}
 
 {% endif %}
 
-## Agregar una plantilla de propuesta
+### Agregar una plantilla de propuesta
 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.files.add-file %}
@@ -68,7 +66,7 @@ asignados: octocat
 {% data reusables.files.choose_commit_branch %} Las plantillas están disponibles para los colaboradores cuando están fusionadas dentro de la rama predeterminada del repositorio.
 {% data reusables.files.propose_new_file %}
 
-## Leer más
+### Leer más
 
 - "[Acerca de las plantillas de propuestas y de solicitudes de extracción](/articles/about-issue-and-pull-request-templates)"
 - "[Configurar las plantillas de reporte de problemas en su repositorio](/articles/configuring-issue-templates-for-your-repository)"

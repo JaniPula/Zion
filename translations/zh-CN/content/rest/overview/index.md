@@ -3,10 +3,9 @@ title: REST API 概述
 shortTitle: 概览
 intro: '了解 {% data variables.product.prodname_dotcom %} REST API 的资源、库、预览和故障排除。'
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - API
 children:
@@ -18,6 +17,5 @@ children:
   - /libraries
   - /openapi-description
   - /endpoints-available-for-github-apps
-  - /permissions-required-for-github-apps
 ---
-
+### 目录
