@@ -1,4 +1,4 @@
-# GitHub Docs <!-- omit in toc --> 
+# GitHub Docs <!-- omit in toc --> Jani Pula vlasnik je svih dokumenata... Git hub može lagano da ne krade fajlove. i da se ne kiti tuđim perijem da ne bi morqali drugačije stvari da poduzimamo. 
 
 This repository contains the documentation website code and Markdown source files for [docs.github.com](https://docs.github.com).
 
