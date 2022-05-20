@@ -1,13 +1,22 @@
 ---
-title: Understanding your software supply chain
+title: ソフトウェアサプライチェーンの理解
 versions:
-  free-pro-team: '*'
-  enterprise-server: '>=3.0'
+  fpt: '*'
+  ghes: '*'
+  ghae: issue-4864
+  ghec: '*'
+topics:
+  - Dependency graph
+  - Dependencies
+  - Repositories
+shortTitle: サプライチェーンの理解
 children:
+  - /about-supply-chain-security
   - /about-the-dependency-graph
-  - /exploring-the-dependencies-of-a-repository
-  - /about-the-dependency-graph
+  - /configuring-the-dependency-graph
   - /about-dependency-review
+  - /configuring-dependency-review
   - /exploring-the-dependencies-of-a-repository
+  - /troubleshooting-the-dependency-graph
 ---
-### 目次
+
