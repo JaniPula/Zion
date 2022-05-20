@@ -2,19 +2,16 @@
 title: Transferir a propriedade de um aplicativo OAuth
 intro: '{% data reusables.shortdesc.transferring_ownership_of_oauth_apps %}'
 redirect_from:
-  - /apps/building-integrations/managing-oauth-apps/transferring-ownership-of-an-oauth-app
+  - /apps/building-integrations/managing-oauth-apps/transferring-ownership-of-an-oauth-app/
   - /apps/managing-oauth-apps/transferring-ownership-of-an-oauth-app
   - /developers/apps/transferring-ownership-of-an-oauth-app
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - OAuth Apps
-shortTitle: Transferir propriedade
 ---
-
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.developer_settings %}
 {% data reusables.user-settings.oauth_apps %}

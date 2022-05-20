@@ -2,18 +2,16 @@
 title: Crear una página 404 personalizada para tu sitio de Páginas de GitHub
 intro: Puedes mostrar una página personalizada de error 404 cuando se intente acceder a páginas que no existen en tu sitio.
 redirect_from:
-  - /articles/custom-404-pages
+  - /articles/custom-404-pages/
   - /articles/creating-a-custom-404-page-for-your-github-pages-site
   - /github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site
 product: '{% data reusables.gated-features.pages %}'
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - Pages
-shortTitle: Crear una página personalizada de error 404
 ---
 
 {% data reusables.pages.navigate-site-repo %}
@@ -32,6 +30,6 @@ shortTitle: Crear una página personalizada de error 404
 {% data reusables.files.choose_commit_branch %}
 {% data reusables.files.propose_new_file %}
 
-## Leer más
+### Leer más
 
 - [Texto preliminar](http://jekyllrb.com/docs/frontmatter) en la documentación de Jekyll

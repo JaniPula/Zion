@@ -1,8 +1,12 @@
-{% ifversion ghae-issue-5752 %}
+{% if currentVersion == "enterprise-server@2.22" %}
 
-<!-- Remove this reusable and all references for GA release -->
+{% note %}
 
-{% elsif ghae %}
+**ノート:** {% data variables.product.prodname_code_scanning_capc %}は{% data variables.product.prodname_ghe_server %} 2.22ではベータです。 Code Scanningの一般に利用なリリースについては、{% data variables.product.prodname_ghe_server %}の最新リリースにアップグレードしてください。
+
+{% endnote %}
+
+{% elsif currentVersion == "github-ae@latest" %}
 
 {% note %}
 

@@ -2,24 +2,22 @@
 title: Testar o site do GitHub Pages localmente com o Jekyll
 intro: 'Você pode criar o site do {% data variables.product.prodname_pages %} localmente para visualizar e testar as alterações nele.'
 redirect_from:
-  - /articles/setting-up-your-pages-site-locally-with-jekyll
-  - /articles/setting-up-your-github-pages-site-locally-with-jekyll
+  - /articles/setting-up-your-pages-site-locally-with-jekyll/
+  - /articles/setting-up-your-github-pages-site-locally-with-jekyll/
   - /articles/testing-your-github-pages-site-locally-with-jekyll
   - /github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll
 product: '{% data reusables.gated-features.pages %}'
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - Pages
-shortTitle: Testar o site localmente com o Jekyll
 ---
 
 Qualquer pessoa com permissões de leitura para um repositório pode testar um site do {% data variables.product.prodname_pages %} localmente.
 
-## Pré-requisitos
+### Pré-requisitos
 
 Antes de usar o Jekyll para testar um site, você deve:
   - Instalar o [Jekyll](https://jekyllrb.com/docs/installation/).
@@ -29,7 +27,7 @@ Antes de usar o Jekyll para testar um site, você deve:
 
 {% data reusables.pages.jekyll-install-troubleshooting %}
 
-## Criar site localmente
+### Criar site localmente
 
 {% data reusables.command_line.open_the_multi_os_terminal %}
 {% data reusables.pages.navigate-publishing-source %}
@@ -50,13 +48,7 @@ Antes de usar o Jekyll para testar um site, você deve:
   ```
 3. Para visualizar o site, navegue para `http://localhost:4000` no navegador da web.
 
-{% note %}
-
-**Observação:** Se você estiver usando o Ruby 3.0 e Jekyll 4.2 ou versão anterior, você deverá adicionar o gem do `webrick` ao arquivo do seu projeto antes de executar `bundle install`.
-
-{% endnote %}
-
-## Atualizar o gem do {% data variables.product.prodname_pages %}
+### Atualizar o gem do {% data variables.product.prodname_pages %}
 
 O Jekyll é um projeto ativo de código aberto que é atualizado com frequência. Se o gem `github-pages` no seu computador estiver desatualizado em relação ao gem `github-pages` no servidor do {% data variables.product.prodname_pages %}, seu site poderá ter uma aparência diferente da criada localmente quando for publicado no {% data variables.product.product_name %}. Para evitar isso, atualize regularmente o gem `github-pages` no seu computador.
 
@@ -65,6 +57,6 @@ O Jekyll é um projeto ativo de código aberto que é atualizado com frequência
     - Se você instalou o bundler, execute `bundle update github-pages`.
     - Se não tiver o bundler instalado, execute `gem update github-pages`.
 
-## Leia mais
+### Leia mais
 
 - [{% data variables.product.prodname_pages %}](http://jekyllrb.com/docs/github-pages/) na documentação do Jekyll

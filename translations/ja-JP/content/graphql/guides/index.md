@@ -4,10 +4,9 @@ intro: GraphQLの始め方、RESTからGraphQLへの移行、様々なタスク�
 redirect_from:
   - /v4/guides
 versions:
-  fpt: '*'
-  ghec: '*'
-  ghes: '*'
-  ghae: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - API
 children:
@@ -18,6 +17,5 @@ children:
   - /using-the-explorer
   - /managing-enterprise-accounts
   - /using-the-graphql-api-for-discussions
-  - /migrating-graphql-global-node-ids
 ---
 

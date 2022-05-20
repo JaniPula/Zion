@@ -2,25 +2,23 @@
 title: Configurar a sincronização de hora
 intro: 'O {% data variables.product.prodname_ghe_server %} sincroniza automaticamente o relógio conectando-se a servidores NTP. Você pode definir os servidores NTP usados para sincronizar o relógio ou pode usar os servidores NTP padrão.'
 redirect_from:
-  - /enterprise/admin/articles/adjusting-the-clock
-  - /enterprise/admin/articles/configuring-time-zone-and-ntp-settings
-  - /enterprise/admin/articles/setting-ntp-servers
-  - /enterprise/admin/categories/time
+  - /enterprise/admin/articles/adjusting-the-clock/
+  - /enterprise/admin/articles/configuring-time-zone-and-ntp-settings/
+  - /enterprise/admin/articles/setting-ntp-servers/
+  - /enterprise/admin/categories/time/
   - /enterprise/admin/installation/configuring-time-synchronization
   - /enterprise/admin/configuration/configuring-time-synchronization
   - /admin/configuration/configuring-time-synchronization
 versions:
-  ghes: '*'
+  enterprise-server: '*'
 type: how_to
 topics:
   - Enterprise
   - Fundamentals
   - Infrastructure
   - Networking
-shortTitle: Definir configurações de hora
 ---
-
-## Alterar os servidores NTP padrão
+### Alterar os servidores NTP padrão
 
 {% data reusables.enterprise_site_admin_settings.access-settings %}
 {% data reusables.enterprise_site_admin_settings.management-console %}
@@ -29,7 +27,7 @@ shortTitle: Definir configurações de hora
 4. Na parte inferior da página, clique em **Save settings** (Salvar configurações). ![Botão Save settings (Salvar configurações) no {% data variables.enterprise.management_console %}](/assets/images/enterprise/management-console/save-settings.png)
 5. Aguarde a conclusão da execução de suas configurações.
 
-## Corrigir descompassos de tempo
+### Corrigir descompassos de tempo
 
 O protocolo NTP corrige continuamente pequenas discrepâncias de sincronização de tempo. Você pode usar o shell administrativo para sincronizar a hora de imediato.
 

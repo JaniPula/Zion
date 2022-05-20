@@ -4,10 +4,9 @@ intro: 'Saiba mais sobre como começar com o GraphQL, migrando da REST para o Gr
 redirect_from:
   - /v4/guides
 versions:
-  fpt: '*'
-  ghec: '*'
-  ghes: '*'
-  ghae: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - API
 children:
@@ -18,6 +17,5 @@ children:
   - /using-the-explorer
   - /managing-enterprise-accounts
   - /using-the-graphql-api-for-discussions
-  - /migrating-graphql-global-node-ids
 ---
 

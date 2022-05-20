@@ -2,19 +2,16 @@
 title: 转让 GitHub 应用程序的所有权
 intro: '{% data reusables.shortdesc.transferring_ownership_of_github_apps %}'
 redirect_from:
-  - /apps/building-integrations/managing-github-apps/transferring-ownership-of-a-github-app
+  - /apps/building-integrations/managing-github-apps/transferring-ownership-of-a-github-app/
   - /apps/managing-github-apps/transferring-ownership-of-a-github-app
   - /developers/apps/transferring-ownership-of-a-github-app
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - GitHub Apps
-shortTitle: 转移所有权
 ---
-
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.developer_settings %}
 {% data reusables.user-settings.github_apps %}

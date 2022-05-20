@@ -5,10 +5,9 @@ redirect_from:
   - /articles/managing-organization-settings
   - /github/setting-up-and-managing-organizations-and-teams/managing-organization-settings
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - Organizations
   - Teams
@@ -20,12 +19,10 @@ children:
   - /setting-permissions-for-deleting-or-transferring-repositories
   - /restricting-repository-visibility-changes-in-your-organization
   - /managing-the-forking-policy-for-your-organization
-  - /managing-pull-request-reviews-in-your-organization
   - /disabling-or-limiting-github-actions-for-your-organization
   - /configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-organization
   - /setting-permissions-for-adding-outside-collaborators
   - /allowing-people-to-delete-issues-in-your-organization
-  - /enabling-or-disabling-github-discussions-for-an-organization
   - /managing-discussion-creation-for-repositories-in-your-organization
   - /setting-team-creation-permissions-in-your-organization
   - /managing-scheduled-reminders-for-your-organization
@@ -39,9 +36,6 @@ children:
   - /converting-an-organization-into-a-user
   - /integrating-jira-with-your-organization-project-board
   - /upgrading-to-the-corporate-terms-of-service
-  - /disabling-project-boards-in-your-organization
-shortTitle: 管理组织设置
 ---
-
-{% ifversion fpt or ghec %}
+{% if currentVersion == "free-pro-team@latest" %}
 {% endif %}

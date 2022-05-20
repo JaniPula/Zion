@@ -7,5 +7,3 @@
 * `s3:AbortMultipartUpload`
 * `s3:DeleteObject`
 * `s3:ListBucket`
-* `kms:GenerateDataKey` (si se habilitó el cifrado del servicio de administración de llaves (KMS))
-

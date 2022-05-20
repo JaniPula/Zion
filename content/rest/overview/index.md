@@ -3,10 +3,9 @@ title: REST API overview
 shortTitle: Overview
 intro: 'Learn about resources, libraries, previews and troubleshooting for {% data variables.product.prodname_dotcom %}''s REST API.'
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - API
 children:
@@ -18,6 +17,5 @@ children:
   - /libraries
   - /openapi-description
   - /endpoints-available-for-github-apps
-  - /permissions-required-for-github-apps
 ---
 

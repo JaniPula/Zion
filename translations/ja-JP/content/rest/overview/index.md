@@ -3,10 +3,9 @@ title: REST API の概要
 shortTitle: 概要
 intro: '{% data variables.product.prodname_dotcom %} の REST API のリソース、ライブラリ、プレビュー、トラブルシューティングについて学びます。'
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - API
 children:
@@ -18,6 +17,5 @@ children:
   - /libraries
   - /openapi-description
   - /endpoints-available-for-github-apps
-  - /permissions-required-for-github-apps
 ---
-
+### 目次

@@ -2,22 +2,20 @@
 title: Creating a footer or sidebar for your wiki
 intro: You can add a custom sidebar or footer to your wiki to provide readers with more contextual information.
 redirect_from:
-  - /articles/creating-a-footer
-  - /articles/creating-a-sidebar
+  - /articles/creating-a-footer/
+  - /articles/creating-a-sidebar/
   - /articles/creating-a-footer-or-sidebar-for-your-wiki
   - /github/building-a-strong-community/creating-a-footer-or-sidebar-for-your-wiki
 product: '{% data reusables.gated-features.wikis %}'
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - Community
-shortTitle: Create footer or sidebar
 ---
 
-## Creating a footer
+### Creating a footer
 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.sidebar-wiki %}
@@ -29,7 +27,7 @@ shortTitle: Create footer or sidebar
   ![Wiki commit message](/assets/images/help/wiki/wiki_commit_message.png)
 6. To commit your changes to the wiki, click **Save Page**.
 
-## Creating a sidebar
+### Creating a sidebar
 
 {% data reusables.repositories.navigate-to-repo %}
 {% data reusables.repositories.sidebar-wiki %}
@@ -41,6 +39,6 @@ shortTitle: Create footer or sidebar
   ![Wiki commit message](/assets/images/help/wiki/wiki_commit_message.png)
 6. To commit your changes to the wiki, click **Save Page**.
 
-## Creating a footer or sidebar locally
+### Creating a footer or sidebar locally
 
 If you create a file named `_Footer.<extension>` or `_Sidebar.<extension>`, we'll use them to populate the footer and sidebar of your wiki, respectively. Like every other wiki page, the extension you choose for these files determines how we render them.

@@ -1,3 +1,1 @@
-1. [**Jobs**] または視覚化グラフで、表示するジョブをクリックします。
-
-   ![Lint コードベースジョブ](/assets/images/help/repository/superlinter-lint-code-base-job-updated.png)
+1. 左のサイドバーで、表示させたいジョブをクリックしてください。 ![左サイドバーのジョブのリスト](/assets/images/help/repository/check-suite-list.png)

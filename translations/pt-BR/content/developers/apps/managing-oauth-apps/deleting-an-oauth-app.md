@@ -2,18 +2,16 @@
 title: Excluir um aplicativo OAuth
 intro: '{% data reusables.shortdesc.deleting_oauth_apps %}'
 redirect_from:
-  - /apps/building-integrations/managing-oauth-apps/deleting-an-oauth-app
+  - /apps/building-integrations/managing-oauth-apps/deleting-an-oauth-app/
   - /apps/managing-oauth-apps/deleting-an-oauth-app
   - /developers/apps/deleting-an-oauth-app
 versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
+  free-pro-team: '*'
+  enterprise-server: '*'
+  github-ae: '*'
 topics:
   - OAuth Apps
 ---
-
 {% data reusables.user-settings.access_settings %}
 {% data reusables.user-settings.developer_settings %}
 {% data reusables.user-settings.oauth_apps %}

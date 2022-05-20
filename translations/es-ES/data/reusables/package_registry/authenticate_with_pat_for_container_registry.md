@@ -1,11 +1,13 @@
-{% ifversion fpt or ghec or ghes > 3.4 %}
+{% if currentVersion == "free-pro-team@latest" %}
 
-Para autenticarse en el {% data variables.product.prodname_container_registry %} dentro de un flujo de trabajo de {% data variables.product.prodname_actions %}, utiliza el `GITHUB_TOKEN` para tener la mejor experiencia en seguridad. If your workflow is using a personal access token (PAT) to authenticate to `{% data reusables.package_registry.container-registry-hostname %}`, then we highly recommend you update your workflow to use the `GITHUB_TOKEN`.
+Los PAT pueden otorgar accesos amplios a tu cuenta. Puedes seleccionar solo el alcance necesario de `read:packages`, `write:packages`, o `delete:packages` cuando creas un PAT para autenticarte en el {% data variables.product.prodname_container_registry %}.
 
-{% ifversion fpt or ghec %}For guidance on updating your workflows that authenticate to `{% data reusables.package_registry.container-registry-hostname %}` with a personal access token, see "[Upgrading a workflow that accesses `ghcr.io`](/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio)."{% endif %}
+To authenticate to the {% data variables.product.prodname_container_registry %} within a {% data variables.product.prodname_actions %} workflow, use the `GITHUB_TOKEN` for the best security and experience.
 
-Para obtener más información sobre el `GITHUB_TOKEN`, consulta la sección "[Autenticación en un flujo de trabajo](/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow)".
+Para obtener orientación sobre cómo actualizar tus flujos de trabajo que se autentican en `ghcr.io` con un token de acceso personal, consulta la sección "[Mejorar un flujo de trabajo que acceda a `ghcr.io`](/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-ghcrio)".
 
-Si estás utilizando el {% data variables.product.prodname_container_registry %} en las acciones, sigue nuestras mejores prácticas de seguridad en "[Fortalecimiento de seguridad para las Acciones de GitHub](/actions/getting-started-with-github-actions/security-hardening-for-github-actions#considering-cross-repository-access)".
+{% data reusables.package_registry.github-token-security-over-pat %}
+
+Si te gustaría utilizar el {% data variables.product.prodname_container_registry %} en las acciones durante el beta, sigue nuestras mejores prácticas de seguridad para uso de PAT en la sección "[Fortalecimiento de seguridad para las GitHub Actions](/actions/getting-started-with-github-actions/security-hardening-for-github-actions#considering-cross-repository-access)".
 
 {% endif %}
