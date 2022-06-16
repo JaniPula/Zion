@@ -3,7 +3,7 @@
 # --------------------------------------------------------------------------------
 # BASE IMAGE
 # --------------------------------------------------------------------------------
-FROM node:18.2.0-alpine@sha256:0677e437543d10f6cb050d92c792a14e5eb84340e3d5b4c25a88baa723d8a4ae as base
+FROM node:18.4.0-alpine@sha256:bb6a914a2bb05742f32ba508b51a042652ef624b76fd8a483b1dddfeebabe15b as base
 
 # This directory is owned by the node user
 ARG APP_HOME=/home/node/app
